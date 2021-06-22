@@ -263,6 +263,22 @@ header #menu{
  .feature .box-container .box:hover i{
    color:cornsilk;  
  }
+ /* Screen shot */
+
+ .screen-slider{
+     width: 75%;
+     margin: 2rem auto;
+ }
+
+ .screen-slider .item{
+    margin: 0 auto;
+    width: 30rem;
+ }
+
+ .screen-slider .item img{
+     box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+     border: .1rem solid rgba(0,0,0,0.1);
+ }
 /* media query */
 @media (max-width:991px){
     html{
