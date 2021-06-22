@@ -392,7 +392,48 @@ header #menu{
 }
 
 .plan .box-container .box:hover{
-   transform: scale(-1.10);
+   transform: scale(1.10);
+}
+
+
+/* download section */
+
+.download {
+    min-height: 100vh;
+    background: #222;
+}
+
+.download .box-container .box{
+    margin: 2rem;
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    box-shadow: 0 .3rem .5rem #000;
+    width: 35rem;
+}
+
+.download .box-container .box i{
+    color: #fff;
+    font-size: 5rem;
+    padding: 2rem 0;
+}
+
+.download .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.download .box-container .box p{
+    color: #eee;
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.download .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* media query */
