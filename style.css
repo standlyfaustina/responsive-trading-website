@@ -17,6 +17,14 @@
     transition: all .2s linear;
 }
 
+a{
+    text-decoration: none;
+}
+
+.btn{
+    
+}
+
 *::selection{
     background: var(--blue);
     color: #fff;
@@ -27,6 +35,47 @@ html{
     overflow-x: hidden;
 
 }
+
+.btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+  .heading{
+      text-align: center;
+      padding: 1rem;
+      padding-top: 6.5rem;
+  }
+
+  .heading span{
+      display: inline-block;
+      font-size: 2.5rem;
+      padding: .5rem 7rem;
+      color: #444;
+      background: #fff;
+  }
 
 header{
     width: 100%;
@@ -82,14 +131,138 @@ header #menu{
     cursor: pointer;
     display: none;
 }
+/* social icons */
+#share{
+    position: fixed;
+    top: 50%;
+    right: -30.5rem;
+    display: flex;
+    transform: translateY(-50%);
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+#share.share-active{
+    right: 0;
+}
+
+#share i, #share a{
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+}
+
+#share i{
+    background: #444;
+    color: #fff;
+    cursor: pointer;
+}
+
+#share a{
+    background: rgb(255, 255, 255);
+    color: rgb(16, 39, 245);
+    border-left: .1rem solid rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+#share a:hover{
+    background: rgb(82, 19, 253);
+    color: rgb(253, 253, 253);
+}
+
+#share i:hover{
+    background: #222;
+}
+
 
 /* home section */
 
 .home{
     min-height: 100vh;
-    background: url(../images/home.jpg);
+    background: url(../images/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    padding: 1rem 2rem;
+    padding-top: 6rem;
 }
 
+.home .content{
+    width: 45vw;
+}
+
+.home .content h1{
+    font-size: 5rem;
+}
+
+ .home .content p{
+     font-size: 1.8rem;
+     color: #665;
+     padding: 1rem 0;
+ }
+
+ .home .content .buttons a:nth-child(2) .btn{
+     background: #444;
+     margin-left: 1rem;
+ }
+
+ .home .content .buttons a:nth-child(2):hover .btn{
+     opacity: .7;
+ }
+
+ /* feature section */
+
+ .feature{
+     min-height: 100vh;
+ }
+
+ .feature .box-container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ .feature .box-container .box{
+     text-align: center;
+     width: 30rem;
+     padding: 2rem;
+     margin: 2rem;
+     border: .1rem solid rgba(0,0,0,0.1);
+     box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+     cursor: pointer;
+ }
+
+ .feature .box-container .box i{
+     font-size: 5rem;
+     padding: 2rem 0;
+     color: var(--blue);
+ }
+
+ .feature .box-container .box h3{
+     font-size: 2rem;
+     color: rgb(108, 108, 114);
+ }
+
+ .feature .box-container .box p{
+     font-size: 1.2rem;
+     color: rgb(68, 72, 80);
+     padding: 1rem;
+ }
+ 
+ .feature .box-container .box:hover{
+   background: rgb(68, 72, 80);  
+ }
+
+ .feature .box-container .box:hover p{
+   color:cornsilk;  
+ }
+
+ .feature .box-container .box:hover i{
+   color:cornsilk;  
+ }
 /* media query */
 @media (max-width:991px){
     html{
@@ -135,6 +308,20 @@ header #menu{
 
 }
 
+@media (max-width:768px){
+    .home{
+        flex-flow: column-reverse;
+    }
+
+    .home .content{
+        padding: 2rem 0;
+        width: auto;
+    }
+
+    .home .content h1{
+        font-size: 4rem;
+    }
+}
 
 @media (max-width:500px){
     html{
@@ -143,5 +330,9 @@ header #menu{
 
     header .navbar{
         width: 100vw;
+    }
+
+    .home .image img{
+        width: 90vw;
     }
 }
